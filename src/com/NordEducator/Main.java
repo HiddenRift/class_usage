@@ -11,9 +11,21 @@ public class Main {
 
         Person aPerson = new Person(myAge, myName, amMale);
 
-        System.out.printf("My name is %s,\nI am %d years old\nand it is %b that I am male",
+        System.out.printf("My name is %s,\nI am %d years old\nand it is %b that I am male\n\n",
                 aPerson.getName(),
                 aPerson.getAge(),
                 aPerson.getMale());
+
+        int nordsAge = 50;
+        String nordsName = "Adam";
+        boolean nordsMale = true;
+        int maxPintsCanDrink = 60;
+
+        Northerner adam = new Northerner(nordsAge, nordsName, nordsMale, maxPintsCanDrink);
+        System.out.printf("My name is %s,\nI am %d years old\nand it is %b that I am male.\nI can also down %d pints\n\n",
+                adam.getName(),
+                adam.getAge(),
+                adam.getMale(),
+                adam.getMaxPints());
     }
 }
