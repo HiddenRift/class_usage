@@ -1,5 +1,7 @@
 package com.NordEducator;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -16,11 +18,18 @@ public class Main {
                 aPerson.getAge(),
                 aPerson.getMale());
 
-        int nordsAge = 50;
-        String nordsName = "Adam";
-        boolean nordsMale = true;
-        int maxPintsCanDrink = 60;
+        Scanner scanner = new Scanner(System.in);
 
+        System.out.printf("enterAge:\n");
+        int nordsAge = Integer.parseInt(scanner.nextLine());
+        System.out.printf("enterName:\n");
+        String nordsName = scanner.nextLine();
+        System.out.printf("male,true/false:\n");
+        boolean nordsMale = Boolean.parseBoolean(scanner.nextLine());
+        System.out.printf("enterMaxPints:\n");
+        int maxPintsCanDrink = Integer.parseInt(scanner.nextLine());
+
+        // note max pints is set later in second instance, it can be done earlier however
         Northerner adam = new Northerner(nordsAge, nordsName, nordsMale, 0);
         System.out.printf("My name is %s,\nI am %d years old\nand it is %b that I am male.\nI can also down %d pints\n\n",
                 adam.getName(),
