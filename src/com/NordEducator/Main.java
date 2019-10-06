@@ -21,7 +21,15 @@ public class Main {
         boolean nordsMale = true;
         int maxPintsCanDrink = 60;
 
-        Northerner adam = new Northerner(nordsAge, nordsName, nordsMale, maxPintsCanDrink);
+        Northerner adam = new Northerner(nordsAge, nordsName, nordsMale, 0);
+        System.out.printf("My name is %s,\nI am %d years old\nand it is %b that I am male.\nI can also down %d pints\n\n",
+                adam.getName(),
+                adam.getAge(),
+                adam.getMale(),
+                adam.getMaxPints());
+
+        // add alcoholism
+        adam.setMaxPints(maxPintsCanDrink);
         System.out.printf("My name is %s,\nI am %d years old\nand it is %b that I am male.\nI can also down %d pints\n\n",
                 adam.getName(),
                 adam.getAge(),
